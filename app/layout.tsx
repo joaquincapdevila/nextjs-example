@@ -1,3 +1,9 @@
+import { poppins } from './ui/fonts';
+import  './ui/global.css'
+
+
+
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +11,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${poppins.className} antialiased`}>
+        {children}
+      <footer className='flex justify-center items-center'>Hecho con ❤️ por versel</footer>
+      </body>
     </html>
   );
 }
